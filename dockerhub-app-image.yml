@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: create docker image using war file
+    command: docker build -t app-image:latest .
+    args:
+      chdir: /opt/docker
+
+  - name: create tag to image
+    command: docker tag app-image jayjodev/app-image
+
+  - name: push image on to dockerhub
+    command: docker push jayjodev/app-image
+
+  - name: remove docker images from ansible server
+    command: docker rmi app-image:latest jayjodev/app-image
+    ignore_errors: yes

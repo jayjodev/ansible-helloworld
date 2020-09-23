@@ -1,4 +1,5 @@
-FROM tomcat:latest
+# FROM tomcat:latest
+FROM tomcat:8.0-alpine
 
 ARG WAR_FILE=./*.war
 

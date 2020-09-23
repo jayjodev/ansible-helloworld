@@ -3,4 +3,4 @@ FROM tomcat:8.0-alpine
 
 ARG WAR_FILE=./*.war
 
-COPY ${WAR_FILE} /usr/local/tomcat/webapps/ROOT.war
+COPY ${WAR_FILE} /usr/local/tomcat/webapps/app.war

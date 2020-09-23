@@ -1,3 +1,5 @@
 FROM tomcat:latest
 
-COPY ./*.war /usr/local/tomcat/webapps
+ARG WAR_FILE=./*.war
+
+COPY ${WAR_FILE} /usr/local/tomcat/webapps/app.war

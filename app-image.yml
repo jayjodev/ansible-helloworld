@@ -28,4 +28,4 @@
     command: docker pull jayjodev/app-image:latest
 
   - name: creating docker image
-    command: docker run -d --name app-container -p 8080:8080 jayjodev/app-image
+    command: docker run -d --name app-container -p 8081:8080 jayjodev/app-image

@@ -5,7 +5,7 @@
   - name: create docker image using war file
     command: docker build -t app-image:latest .
     args:
-      chdir: /opt/docker
+      chdir: /opt/app
 
   - name: create tag to image
     command: docker tag app-image jayjodev/app-image

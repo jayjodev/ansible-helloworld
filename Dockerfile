@@ -1,6 +1,7 @@
-# FROM tomcat:latest
-FROM tomcat:8.0-alpine
+FROM amazoncorretto:8
 
 ARG WAR_FILE=./*.war
 
-COPY ${WAR_FILE} /usr/local/tomcat/webapps/app.war
+COPY ${WAR_FILE} ./app.war
+
+CMD [java -jar app.war]

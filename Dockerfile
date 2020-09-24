@@ -1,7 +1,4 @@
 FROM amazoncorretto:8
-
-ARG WAR_FILE=./*.war
-
-COPY ${WAR_FILE} ./app.war
-
-CMD [java -jar app.war]
+ADD /opt/app/webapp-2.3.3.RELEASE.war /webapp-2.3.3.RELEASE.war
+EXPOSE 8081
+ENTRYPOINT ["java","-jar","/webapp-2.3.3.RELEASE.war"]

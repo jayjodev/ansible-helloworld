@@ -1,4 +1,4 @@
-FROM amazoncorretto:8
+FROM adoptopenjdk/openjdk11
 ENV TZ=Asia/Seoul
 WORKDIR /app
 
